@@ -49,11 +49,15 @@ public class Game {
     private boolean queenIsSave(int row) {
         int collum = board[row];
 
+        // Loop for every collum left from our queen
         for (int i = 0; i < row; i++)
         {
             if (
+                    // Check if there is a queen in the same row
                     board[i] == collum ||
+                    // Check if there is a queen to the bottom left
                     board[row - (i + 1)] == collum - (i + 1) ||
+                    // Check if there is a queen to the top left
                     board[row - (i + 1)] == collum + (i + 1)
                 )
             {
