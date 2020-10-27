@@ -51,7 +51,6 @@ public class Game {
                 }
             }
         }
-        board[row] = 0;
     }
 
     /**
@@ -62,42 +61,15 @@ public class Game {
     private boolean queenIsSave(int row) {
         int collum = board[row];
 
-        // Check if there is already another queen in that row
-        int index = indexOf(collum, board);
-        if (index != row) {
-            return false;
-
-        // We do not need to check our collum because the new queen overwrites the old one. (1-layer-array-structure)
-
-        }else{
-            /*
-             * The following 2 parts are the same.
-             * Each one looks in a diagonal line from the queen and checks if it hits another one.
-             * There maybe more efficient solutions...
-             */
-
-            int distance = 1;
-            // Bottom - Left
-            // Loop to check if the calculated position is still part of the game-board.
-            while (row - distance >= ONE && collum - distance >= A)
+        for (int i = 0; i < row; i++)
+        {
+            if (
+                    board[i] == collum ||
+                    board[row - (i + 1)] == collum - (i + 1) ||
+                    board[row - (i + 1)] == collum + (i + 1)
+                )
             {
-                // Check if the queen at that row is in the position we would cross.
-                if (board[row - distance] == collum - distance)
-                {
-                    return false;
-                }
-                distance++;
-            }
-            // Reset distance
-            distance = 1;
-            // Bottom - Right
-            while (row - distance >= ONE && collum + distance <= N)
-            {
-                if (board[row - distance] == collum + distance)
-                {
-                    return false;
-                }
-                distance++;
+                return false;
             }
         }
         return true;
