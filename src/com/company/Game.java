@@ -16,7 +16,7 @@ public class Game {
      * We only need a one dimensional array:
      * The key is the identifier of the row.
      * The value show if there is a queen or not.
-     * 0 means no queen. Another number indicates the collum where the lines queen is placed.
+     * 0 means no queen. Another number indicates the collumn where the lines queen is placed.
      */
     protected int[] board = new int[N];
 
@@ -47,18 +47,18 @@ public class Game {
      * @return boolean
      */
     private boolean queenIsSave(int row) {
-        int collum = board[row];
+        int collumn = board[row];
 
-        // Loop for every collum left from our queen
+        // Loop for every collumn left from our queen
         for (int i = 0; i < row; i++)
         {
             if (
                     // Check if there is a queen in the same row
-                    board[i] == collum ||
+                    board[i] == collumn ||
                     // Check if there is a queen to the bottom left
-                    board[row - (i + 1)] == collum - (i + 1) ||
+                    board[row - (i + 1)] == collumn - (i + 1) ||
                     // Check if there is a queen to the top left
-                    board[row - (i + 1)] == collum + (i + 1)
+                    board[row - (i + 1)] == collumn + (i + 1)
                 )
             {
                 return false;
