@@ -6,22 +6,10 @@ public class Game {
 
     // We start with 1 to keep the zero as a no Queen indicator
     public static final int A = 1;
-    public static final int B = 2;
-    public static final int C = 3;
-    public static final int D = 4;
-    public static final int E = 5;
-    public static final int F = 6;
-    public static final int G = 7;
     public static final int H = 8;
 
     // We start with 0 because arrays are zero-indexed.
     public static final int ONE = 0;
-    public static final int TWO = 1;
-    public static final int THREE = 2;
-    public static final int FOUR = 3;
-    public static final int FIVE = 4;
-    public static final int SIX = 5;
-    public static final int SEVEN = 6;
     public static final int EIGHT = 7;
 
     /*
