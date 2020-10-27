@@ -41,6 +41,7 @@ public class Game {
                 }
             }
         }
+        board[row] = 0;
     }
 
     private boolean queenIsSave(int row) {

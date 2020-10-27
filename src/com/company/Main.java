@@ -6,6 +6,6 @@ public class Main {
 	// write your code here
         Game game = new Game();
         game.finishConfiguration(Game.ONE);
-        System.out.println("Anzahl der Lösungen: " + game.solutions);
+        System.out.println("Anzahl der gefunden Lösungen: " + game.solutions);
     }
 }
