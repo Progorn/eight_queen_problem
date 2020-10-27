@@ -73,6 +73,7 @@ public class Game {
             /*
              * The following 2 parts are the same.
              * Each one looks in a diagonal line from the queen and checks if it hits another one.
+             * There maybe more efficient solutions...
              */
 
             int distance = 1;
